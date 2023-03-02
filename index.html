@@ -2453,7 +2453,7 @@
                 feature: layer.feature,
                 variables: {}
             };
-            layer.bindTooltip((layer.feature.properties['WADMKD'] !== null?String('<div style="color: #ff7c01; font-size: 14pt; font-family: \'Calibri\', sans-serif;">' + layer.feature.properties['WADMKD']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_BatasDesa_4'});
+            layer.bindTooltip((layer.feature.properties['WADMKD'] !== null?String('<div style="color: #ff7c01; font-size: 14pt; font-family: \'Calibri\', sans-serif;">' + layer.feature.properties['WADMKD']) + '</div>':''), {permanent: true, direction: 'center', offset: [-0, -16], className: 'css_BatasDesa_4'});
             labels.push(layer);
             totalMarkers += 1;
               layer.added = true;
@@ -2466,7 +2466,7 @@
                 feature: layer.feature,
                 variables: {}
             };
-            layer.bindTooltip((layer.feature.properties['WADMKC'] !== null?String('<div style="color: #011fff; font-size: 16pt; font-weight: bold; font-family: \'Candara\', sans-serif;">' + layer.feature.properties['WADMKC']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_BatasKecamatan_5'});
+            layer.bindTooltip((layer.feature.properties['WADMKC'] !== null?String('<div style="color: #011fff; font-size: 16pt; font-weight: bold; font-family: \'Candara\', sans-serif;">' + layer.feature.properties['WADMKC']) + '</div>':''), {permanent: true, direction: 'center', offset: [-0, -16], className: 'css_BatasKecamatan_5'});
             labels.push(layer);
             totalMarkers += 1;
               layer.added = true;
@@ -2500,7 +2500,7 @@
               i++;
         });
                 if (map.hasLayer(layer_BatasDesa_4)) {
-                    if (map.getZoom() <= 12 && map.getZoom() >= 19) {
+                    if (map.getZoom() >= 12 && map.getZoom() <= 19) {
                         layer_BatasDesa_4.eachLayer(function (layer) {
                             layer.openTooltip();
                         });
@@ -2511,7 +2511,7 @@
                     }
                 }
                 if (map.hasLayer(layer_BatasKecamatan_5)) {
-                    if (map.getZoom() <= 11 && map.getZoom() >= 19) {
+                    if (map.getZoom() >= 11 && map.getZoom() <= 19) {
                         layer_BatasKecamatan_5.eachLayer(function (layer) {
                             layer.openTooltip();
                         });
@@ -2522,7 +2522,7 @@
                     }
                 }
                 if (map.hasLayer(layer_Titik_Sekolah_6)) {
-                    if (map.getZoom() <= 12 && map.getZoom() >= 19) {
+                    if (map.getZoom() >= 12 && map.getZoom() <= 19) {
                         layer_Titik_Sekolah_6.eachLayer(function (layer) {
                             layer.openTooltip();
                         });
@@ -2533,7 +2533,7 @@
                     }
                 }
                 if (map.hasLayer(layer_Data_Bumil_8)) {
-                    if (map.getZoom() <= 12 && map.getZoom() >= 19) {
+                    if (map.getZoom() >= 12 && map.getZoom() <= 19) {
                         layer_Data_Bumil_8.eachLayer(function (layer) {
                             layer.openTooltip();
                         });
