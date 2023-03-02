@@ -24,7 +24,11 @@
         }
         .leaflet-popup-content {
             width:auto;
-            padding-right:10px;
+			max-height:350px;
+            padding-right:25px;
+			overflow-x:hidden;
+			overflow-y:hidden scroll;
+
         }
         .leaflet-tooltip {
             background: none;
