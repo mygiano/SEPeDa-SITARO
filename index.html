@@ -42,6 +42,21 @@
         <script src="data/Data_Bumil_8.js"></script>
         <script src="data/Titik_Stunting_2022_9.js"></script>
         <script>
+		var highlightLayer;
+        function highlightFeature(e) {
+            highlightLayer = e.target;
+
+            if (e.target.feature.geometry.type === 'LineString') {
+              highlightLayer.setStyle({
+                color: '#ff0000',
+              });
+            } else {
+              highlightLayer.setStyle({
+                fillColor: '#ff0000',
+                fillOpacity: 0.5
+              });
+            }
+        }
         var map = L.map('map', {
             zoomControl:true, maxZoom:28, minZoom:1
         }).fitBounds([[2.7276225934263207,125.35669665727478],[2.7557664667973594,125.41874881181575]]);
@@ -117,6 +132,14 @@
         layer_GoogleSatelliteHybrid_3;
         map.addLayer(layer_GoogleSatelliteHybrid_3);
         function pop_BatasDesa_4(feature, layer) {
+			layer.on({
+                mouseout: function(e) {
+                    for (i in e.target._eventParents) {
+                        e.target._eventParents[i].resetStyle(e.target);
+                    }
+                },
+                mouseover: highlightFeature,
+            });
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2"><strong>WADMKD</strong><br />' + (feature.properties['WADMKD'] !== null ? autolinker.link(feature.properties['WADMKD'].toLocaleString()) : '') + '</td>\
@@ -1391,6 +1414,14 @@
         bounds_group.addLayer(layer_BatasDesa_4);
         map.addLayer(layer_BatasDesa_4);
         function pop_BatasKecamatan_5(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    for (i in e.target._eventParents) {
+                        e.target._eventParents[i].resetStyle(e.target);
+                    }
+                },
+                mouseover: highlightFeature,
+            });
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2"><strong>WADMKC</strong><br />' + (feature.properties['WADMKC'] !== null ? autolinker.link(feature.properties['WADMKC'].toLocaleString()) : '') + '</td>\
@@ -1573,6 +1604,14 @@
         bounds_group.addLayer(layer_BatasKecamatan_5);
         map.addLayer(layer_BatasKecamatan_5);
         function pop_Titik_Sekolah_6(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    for (i in e.target._eventParents) {
+                        e.target._eventParents[i].resetStyle(e.target);
+                    }
+                },
+                mouseover: highlightFeature,
+            });
             var popupContent = '<table>\
                     <tr>\
                         <th scope="row">Nama Sekolah</th>\
@@ -1714,6 +1753,14 @@
         bounds_group.addLayer(layer_Titik_Sekolah_6);
         map.addLayer(layer_Titik_Sekolah_6);
         function pop_Sosialisasi_Penyuluhan_7(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    for (i in e.target._eventParents) {
+                        e.target._eventParents[i].resetStyle(e.target);
+                    }
+                },
+                mouseover: highlightFeature,
+            });
             var popupContent = '<table>\
                     <tr>\
                         <th scope="row">fid</th>\
@@ -1873,6 +1920,14 @@
         bounds_group.addLayer(layer_Sosialisasi_Penyuluhan_7);
         map.addLayer(layer_Sosialisasi_Penyuluhan_7);
         function pop_Data_Bumil_8(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    for (i in e.target._eventParents) {
+                        e.target._eventParents[i].resetStyle(e.target);
+                    }
+                },
+                mouseover: highlightFeature,
+            });
             var popupContent = '<table>\
                     <tr>\
                         <th scope="row">fid</th>\
@@ -1963,6 +2018,14 @@
         bounds_group.addLayer(layer_Data_Bumil_8);
         map.addLayer(layer_Data_Bumil_8);
         function pop_Titik_Stunting_2022_9(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    for (i in e.target._eventParents) {
+                        e.target._eventParents[i].resetStyle(e.target);
+                    }
+                },
+                mouseover: highlightFeature,
+            });
             var popupContent = '<table>\
                     <tr>\
                         <th scope="row">fid</th>\
