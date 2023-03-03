@@ -2088,48 +2088,36 @@
                 case 'false':
                     return {
                 pane: 'pane_Titik_Stunting_2022_9',
-                radius: 13.2,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 3.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(111,208,76,1.0)',
+        rotationAngle: 0.0,
+        rotationOrigin: 'center center',
+        icon: L.icon({
+            iconUrl: 'markers/icon boy bebas.svg',
+            iconSize: [25, 25]
+        }),
                 interactive: true,
             }
                     break;
                 case 'true':
                     return {
                 pane: 'pane_Titik_Stunting_2022_9',
-                radius: 13.2,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 3.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(215,57,99,1.0)',
+        rotationAngle: 0.0,
+        rotationOrigin: 'center center',
+        icon: L.icon({
+            iconUrl: 'markers/icon boy stunting.svg',
+            iconSize: [25, 25]
+        }),
                 interactive: true,
             }
                     break;
                 default:
                     return {
                 pane: 'pane_Titik_Stunting_2022_9',
-                radius: 13.2,
-                opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 3.0,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(119,119,119,1.0)',
+        rotationAngle: 0.0,
+        rotationOrigin: 'center center',
+        icon: L.icon({
+            iconUrl: 'markers/boy-baby-svgrepo-com.svg',
+            iconSize: [25, 25]
+        }),
                 interactive: true,
             }
                     break;
@@ -2150,7 +2138,7 @@
                     feature: feature,
                     variables: {}
                 };
-                return L.circleMarker(latlng, style_Titik_Stunting_2022_9_0(feature));
+                return L.marker(latlng, style_Titik_Stunting_2022_9_0(feature));
             },
         });
         bounds_group.addLayer(layer_Titik_Stunting_2022_9);
