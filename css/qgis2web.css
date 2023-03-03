@@ -33,7 +33,7 @@
         .leaflet-popup-content {
             width:auto;
 			max-height:350px;
-            padding-right:25px;
+            padding-right:50px;
 			overflow-x:hidden;
 			overflow-y:hidden scroll;
 

@@ -2170,21 +2170,25 @@
         document.getElementsByClassName('leaflet-control-geocoder-icon')[0]
         .title += 'Search for a place';
 		
-        var baseMaps = {};
-        L.control.layers(baseMaps, {
+        var baseMaps = {
+			"Google Satellite Hybrid": layer_GoogleSatelliteHybrid_3,
+			"Voyager [no labels] (retina)": layer_Voyagernolabelsretina_2,
+			"OpenTopoMap": layer_OpenTopoMap_1,
+			"Stamen Watercolor": layer_StamenWatercolor_0
+			};
+		
+        var overlayMaps = {
 			'Titik_Stunting_2022<br /><table><tr><td style="text-align: center;"><img src="legend/Titik_Stunting_2022_9_BebasStunting0.png" /></td><td>Bebas Stunting</td></tr><tr><td style="text-align: center;"><img src="legend/Titik_Stunting_2022_9_MasihStunting1.png" /></td><td>Masih Stunting</td></tr><tr><td style="text-align: center;"><img src="legend/Titik_Stunting_2022_9_BelumTerdata2.png" /></td><td>Belum Terdata</td></tr></table>': layer_Titik_Stunting_2022_9,
 			'<img src="legend/Data_Bumil_8.png" /> Data_Bumil': layer_Data_Bumil_8,
 			'Sosialisasi_Penyuluhan<br /><table><tr><td style="text-align: center;"><img src="legend/Sosialisasi_Penyuluhan_7_RemajaPemuda0.png" /></td><td>Remaja/Pemuda</td></tr><tr><td style="text-align: center;"><img src="legend/Sosialisasi_Penyuluhan_7_Orangtua1.png" /></td><td>Orangtua</td></tr><tr><td style="text-align: center;"><img src="legend/Sosialisasi_Penyuluhan_7_IbuHamil2.png" /></td><td>Ibu Hamil</td></tr><tr><td style="text-align: center;"><img src="legend/Sosialisasi_Penyuluhan_7_Keluarga3.png" /></td><td>Keluarga</td></tr><tr><td style="text-align: center;"><img src="legend/Sosialisasi_Penyuluhan_7_4.png" /></td><td></td></tr></table>': layer_Sosialisasi_Penyuluhan_7,
 			'Titik_Sekolah<br /><table><tr><td style="text-align: center;"><img src="legend/Titik_Sekolah_6_SD0.png" /></td><td>SD</td></tr><tr><td style="text-align: center;"><img src="legend/Titik_Sekolah_6_SMP1.png" /></td><td>SMP</td></tr><tr><td style="text-align: center;"><img src="legend/Titik_Sekolah_6_Sekolahlainnya2.png" /></td><td>Sekolah lainnya</td></tr></table>': layer_Titik_Sekolah_6,
 			'Batas Kecamatan<br />': layer_BatasKecamatan_5,
 			'Batas Desa<br />': layer_BatasDesa_4,
-			"Google Satellite Hybrid": layer_GoogleSatelliteHybrid_3,
-			"Voyager [no labels] (retina)": layer_Voyagernolabelsretina_2,
-			"OpenTopoMap": layer_OpenTopoMap_1,
-			"Stamen Watercolor": layer_StamenWatercolor_0
-			}, {
+			};		
+		
+        L.control.layers(baseMaps, overlayMaps, {
 			collapsed: true
-		}).addTo(map);
+		}).addTo(map);		
 		
 		L.control.scale({position: 'bottomleft', maxWidth: 100, metric: true, imperial: false, updateWhenIdle: false}).addTo(map);
         map.on("zoomend", function(){
