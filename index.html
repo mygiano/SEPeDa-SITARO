@@ -148,7 +148,7 @@
             });
             var popupContent = '<table>\
                     <tr>\
-                        <td colspan="2"><strong>WADMKD</strong><br />' + (feature.properties['WADMKD'] !== null ? autolinker.link(feature.properties['WADMKD'].toLocaleString()) : '') + '</td>\
+                        <strong>DESA</strong><br />' + (feature.properties['WADMKD'] !== null ? autolinker.link(feature.properties['WADMKD'].toLocaleString()) : '') + '\
                     </tr>\
                     <tr>\
                         <th scope="row">JmlhSD</th>\
@@ -163,7 +163,7 @@
                         <td>' + (feature.properties['JmlhSekolah'] !== null ? autolinker.link(feature.properties['JmlhSekolah'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
-            layer.bindPopup(popupContent, {maxHeight: 400});
+            layer.bindPopup(popupContent, {maxHeight: 400, maxWidth: 400});
         }
 
         function style_BatasDesa_4_0(feature) {
@@ -1430,7 +1430,7 @@
             });
             var popupContent = '<table>\
                     <tr>\
-                        <td colspan="2"><strong>WADMKC</strong><br />' + (feature.properties['WADMKC'] !== null ? autolinker.link(feature.properties['WADMKC'].toLocaleString()) : '') + '</td>\
+                        <strong>KECAMATAN</strong><br />' + (feature.properties['WADMKC'] !== null ? autolinker.link(feature.properties['WADMKC'].toLocaleString()) : '') + '\
                     </tr>\
                     <tr>\
                         <th scope="row">JmlhSD</th>\
@@ -1445,7 +1445,7 @@
                         <td>' + (feature.properties['JmlhSekolah'] !== null ? autolinker.link(feature.properties['JmlhSekolah'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
-            layer.bindPopup(popupContent, {maxHeight: 400});
+            layer.bindPopup(popupContent, {maxHeight: 400, maxWidth: 400});
         }
 
         function style_BatasKecamatan_5_0(feature) {
@@ -1665,22 +1665,22 @@
                     </tr>\
                     <tr>\
                         <th scope="row">FotoA</th>\
-                        <td style="text-align:center;" colspan="2">' + (feature.properties['FotoA'] !== null ? '<img src="images/' + String(feature.properties['FotoA']).replace(/[\\\/:]/g, '/').trim() + '"width="200">' : '') + '</td>\
+                        <td style="text-align:center;" colspan="2">' + (feature.properties['FotoA'] !== null ? '<img src="images/' + String(feature.properties['FotoA']).replace(/[\\\/:]/g, '/').trim() + '"width="250">' : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">FotoB</th>\
-                        <td style="text-align:center;" colspan="2">' + (feature.properties['FotoB'] !== null ? '<img src="images/' + String(feature.properties['FotoB']).replace(/[\\\/:]/g, '/').trim() + '"width="200">' : '') + '</td>\
+                        <td style="text-align:center;" colspan="2">' + (feature.properties['FotoB'] !== null ? '<img src="images/' + String(feature.properties['FotoB']).replace(/[\\\/:]/g, '/').trim() + '"width="250">' : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">FotoC</th>\
-                        <td style="text-align:center;" colspan="2">' + (feature.properties['FotoC'] !== null ? '<img src="images/' + String(feature.properties['FotoC']).replace(/[\\\/:]/g, '/').trim() + '"width="200">' : '') + '</td>\
+                        <td style="text-align:center;" colspan="2">' + (feature.properties['FotoC'] !== null ? '<img src="images/' + String(feature.properties['FotoC']).replace(/[\\\/:]/g, '/').trim() + '"width="250">' : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">Catatan</th>\
                         <td>' + (feature.properties['Catatan'] !== null ? autolinker.link(feature.properties['Catatan'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
-            layer.bindPopup(popupContent, {maxHeight: 400});
+            layer.bindPopup(popupContent, {maxHeight: 400, maxWidth:400});
         }
 
         function style_Titik_Sekolah_6_0(feature) {
@@ -1769,10 +1769,6 @@
             });
             var popupContent = '<table>\
                     <tr>\
-                        <th scope="row">fid</th>\
-                        <td>' + (feature.properties['fid'] !== null ? autolinker.link(feature.properties['fid'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
                         <th scope="row">Judul Kegiatan</th>\
                         <td>' + (feature.properties['judul_sosialisasi'] !== null ? autolinker.link(feature.properties['judul_sosialisasi'].toLocaleString()) : '') + '</td>\
                     </tr>\
@@ -1798,22 +1794,22 @@
                     </tr>\
                     <tr>\
                         <th scope="row">foto_sos1</th>\
-                        <td>' + (feature.properties['foto_sos1'] !== null ? '<img src="images/' + String(feature.properties['foto_sos1']).replace(/[\\\/:]/g, '_').trim() + '">' : '') + '</td>\
+                        <td>' + (feature.properties['foto_sos1'] !== null ? '<img src="images/' + String(feature.properties['foto_sos1']).replace(/[\\\/:]/g, '/').trim() + '"width="250">' : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">foto_sos2</th>\
-                        <td>' + (feature.properties['foto_sos2'] !== null ? '<img src="images/' + String(feature.properties['foto_sos2']).replace(/[\\\/:]/g, '_').trim() + '">' : '') + '</td>\
+                        <td>' + (feature.properties['foto_sos2'] !== null ? '<img src="images/' + String(feature.properties['foto_sos2']).replace(/[\\\/:]/g, '/').trim() + '"width="250">' : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">foto_sos3</th>\
-                        <td>' + (feature.properties['foto_sos3'] !== null ? '<img src="images/' + String(feature.properties['foto_sos3']).replace(/[\\\/:]/g, '_').trim() + '">' : '') + '</td>\
+                        <td>' + (feature.properties['foto_sos3'] !== null ? '<img src="images/' + String(feature.properties['foto_sos3']).replace(/[\\\/:]/g, '/').trim() + '"width="250">' : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">Sasaran Peserta Sosialisasi/ Penyuluhan</th>\
                         <td>' + (feature.properties['sasaran_sos'] !== null ? autolinker.link(feature.properties['sasaran_sos'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
-            layer.bindPopup(popupContent, {maxHeight: 400});
+            layer.bindPopup(popupContent, {maxHeight: 400, maxWidth: 400});
         }
 
         function style_Sosialisasi_Penyuluhan_7_0(feature) {
@@ -1936,10 +1932,6 @@
             });
             var popupContent = '<table>\
                     <tr>\
-                        <th scope="row">fid</th>\
-                        <td>' + (feature.properties['fid'] !== null ? autolinker.link(feature.properties['fid'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
                         <th scope="row">Nama Ibu Hamil</th>\
                         <td>' + (feature.properties['nama_bumil'] !== null ? autolinker.link(feature.properties['nama_bumil'].toLocaleString()) : '') + '</td>\
                     </tr>\
@@ -1984,7 +1976,7 @@
                         <td>' + (feature.properties['HPHT'] !== null ? autolinker.link(feature.properties['HPHT'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
-            layer.bindPopup(popupContent, {maxHeight: 400});
+            layer.bindPopup(popupContent, {maxHeight: 400, maxWidth: 400});
         }
 
         function style_Data_Bumil_8_0() {
@@ -2034,12 +2026,8 @@
             });
             var popupContent = '<table>\
                     <tr>\
-                        <th scope="row">fid</th>\
-                        <td>' + (feature.properties['fid'] !== null ? autolinker.link(feature.properties['fid'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">Nama Balita</th>\
-                        <td>' + (feature.properties['nama_balita'] !== null ? autolinker.link(feature.properties['nama_balita'].toLocaleString()) : '') + '</td>\
+                        <th scope="row"><strong>Nama Balita<strong></th>\
+                        <td><strong>' + (feature.properties['nama_balita'] !== null ? autolinker.link(feature.properties['nama_balita'].toLocaleString()) : '') + '<strong></td>\
                     </tr>\
                     <tr>\
                         <th scope="row">Alamat Tinggal</th>\
@@ -2062,10 +2050,6 @@
                         <td>' + (feature.properties['nama_ayah'] !== null ? autolinker.link(feature.properties['nama_ayah'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">kode_unik</th>\
-                        <td>' + (feature.properties['kode_unik'] !== null ? autolinker.link(feature.properties['kode_unik'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
                         <th scope="row">Tahun Mulai Intervensi Stunting</th>\
                         <td>' + (feature.properties['thn_intervensi'] !== null ? autolinker.link(feature.properties['thn_intervensi'].toLocaleString()) : '') + '</td>\
                     </tr>\
@@ -2086,7 +2070,7 @@
                         <td>' + (feature.properties['Data_Stunting_2022_stunting?'] !== null ? autolinker.link(feature.properties['Data_Stunting_2022_stunting?'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
-            layer.bindPopup(popupContent, {maxHeight: 400});
+            layer.bindPopup(popupContent, {maxHeight: 400, maxWidth: 250});
         }
 
         function style_Titik_Stunting_2022_9_0(feature) {
@@ -2171,10 +2155,10 @@
         .title += 'Search for a place';
 		
         var baseMaps = {
-			"Google Satellite Hybrid": layer_GoogleSatelliteHybrid_3,
-			"Voyager [no labels] (retina)": layer_Voyagernolabelsretina_2,
+			"Stamen Watercolor": layer_StamenWatercolor_0,
 			"OpenTopoMap": layer_OpenTopoMap_1,
-			"Stamen Watercolor": layer_StamenWatercolor_0
+			"Voyager [no labels] (retina)": layer_Voyagernolabelsretina_2,
+			"Google Satellite Hybrid": layer_GoogleSatelliteHybrid_3
 			};
 		
         var overlayMaps = {
@@ -2244,7 +2228,7 @@
                 feature: layer.feature,
                 variables: {}
             };
-            layer.bindTooltip((layer.feature.properties['WADMKD'] !== null?String('<div style="color: #ff7c01; font-size: 14pt; font-family: \'Calibri\', sans-serif;text-shadow: -.5px -.5px #fff, -.5px .5px #fff, .5px -.5px #fff, .5px .5px #fff">' + layer.feature.properties['WADMKD']) + '</div>':''), {permanent: true, direction: 'center', offset: [-0, -16], className: 'css_BatasDesa_4'});
+            layer.bindTooltip((layer.feature.properties['WADMKD'] !== null?String('<div style="color: #ff7c01; font-size: 14pt; font-family: \'Calibri\', sans-serif;text-shadow: -.5px -.5px #000, -.5px .5px #000, .5px -.5px #000, .5px .5px #000">' + layer.feature.properties['WADMKD']) + '</div>':''), {permanent: true, direction: 'center', offset: [-0, -16], className: 'css_BatasDesa_4'});
             labels.push(layer);
             totalMarkers += 1;
               layer.added = true;
@@ -2257,7 +2241,7 @@
                 feature: layer.feature,
                 variables: {}
             };
-            layer.bindTooltip((layer.feature.properties['WADMKC'] !== null?String('<div style="color: #011fff; font-size: 16pt; font-weight: bold; font-family: \'Candara\', sans-serif;">' + layer.feature.properties['WADMKC']) + '</div>':''), {permanent: true, direction: 'center', offset: [-0, -16], className: 'css_BatasKecamatan_5'});
+            layer.bindTooltip((layer.feature.properties['WADMKC'] !== null?String('<div style="color: #011fff; font-size: 16pt; font-weight: bold; font-family: \'Candara\', sans-serif;;text-shadow: -.5px -.5px #fff, -.5px .5px #fff, .5px -.5px #fff, .5px .5px #fff">' + layer.feature.properties['WADMKC']) + '</div>':''), {permanent: true, direction: 'center', offset: [-0, -16], className: 'css_BatasKecamatan_5'});
             labels.push(layer);
             totalMarkers += 1;
               layer.added = true;

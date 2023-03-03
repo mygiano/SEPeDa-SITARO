@@ -2,6 +2,10 @@
         #map {
             background-color: #ffffff
         }
+		table {
+			max-width: 150px;
+			border-collapse: collapse;
+		}	
         th {
             text-align: left;
             vertical-align: top;
@@ -33,10 +37,10 @@
         .leaflet-popup-content {
             width:auto;
 			max-height:350px;
-            padding-right:50px;
+            padding-right:10px;
 			overflow-x:hidden;
-			overflow-y:hidden scroll;
-
+			overflow-y:auto;
+			box-sizing: border-box;
         }
         .leaflet-tooltip {
             background: none;
