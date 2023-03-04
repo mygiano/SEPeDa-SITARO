@@ -383,9 +383,13 @@ svg.leaflet-image-layer.leaflet-interactive path {
 	margin-top: 2px;
 	position: relative;
 	top: 1px;
+	padding-left: 5px;
+	padding-right: 5px;	
 	}
 .leaflet-control-layers label {
 	display: block;
+	padding-top: 5px;
+	padding-bottom: 5px;
 	}
 .leaflet-control-layers-separator {
 	height: 0;
